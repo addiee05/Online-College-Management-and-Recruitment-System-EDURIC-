@@ -29,7 +29,8 @@ Moderation → Ensure valid and eligible profiles before submission.
 Tech Stack
 Django - Backend web framework for application logic & APIs.
 MySQL	- Database for storing applications and user profiles.
-Bootstrap	- Responsive frontend design.
+Bootstrap , HTML , CSS , JS	- Responsive frontend design.
+AI & ML models used
 JavaScript -	Interactive frontend features.
 Machine Learning -	Recommendation system for study/course suggestions & teacher-college matches.
 College API	Fetches real-time college data.
