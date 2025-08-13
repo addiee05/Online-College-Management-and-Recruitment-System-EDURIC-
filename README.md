@@ -1,4 +1,4 @@
-# Online-College-Management-and-Recruitment-System-EDURIC-
+# Online-College-Management-and-Recruitment-System-EDURIC- (Earlier I made this project using JSP for college purpose but it was out of my domain so I am converting it to Django and half way project is done I am working on the backend part which will be uploaded soon).
 
 EDURIC is an intermediary platform that simplifies the college admission and staff recruitment process in India.
 It serves as a communication bridge between students/teachers and colleges, much like an off-campus recruitment/exam platform.
