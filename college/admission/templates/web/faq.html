@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - College Management & Recruitment</title>
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .header {
+      background: linear-gradient(90deg, #4CAF50, #2E8B57);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 5px solid #3e9e57;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin: 20px 0;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-section h2 {
+      color: #4CAF50;
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .faq-item h3:hover {
+      background: #f0f0f0;
+    }
+
+    .faq-item p {
+      display: none;
+      margin: 10px 0 0;
+      padding: 10px;
+      font-size: 0.95rem;
+      background: #f9f9f9;
+      border-left: 4px solid #4CAF50;
+    }
+
+    /* Footer Section */
+    .footer {
+      background: #2E8B57;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 30px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>FAQs - College Management & Recruitment System</h1>
+    <p>Your questions, answered.</p>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="container">
+    <div class="faq-section">
+      <h2>General Questions</h2>
+      <div class="faq-item">
+        <h3>What is the Online College Management and Recruitment System?</h3>
+        <p>This system is a platform designed to manage college administration tasks, student enrollment, recruitment processes, and related activities efficiently.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who can access this system?</h3>
+        <p>The system is accessible to administrators, faculty, students, and recruiters, each with specific roles and privileges.</p>
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <h2>Student FAQs</h2>
+      <div class="faq-item">
+        <h3>How do I register as a new student?</h3>
+        <p>You can register by clicking on the "Sign Up" button on the homepage and filling in the required details. Once submitted, your account will be verified by the admin team.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where can I view my course schedule?</h3>
+        <p>After logging in, navigate to the "Dashboard" section and click on "My Schedule" to view your course timetable.</p>
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <h2>Recruiter FAQs</h2>
+      <div class="faq-item">
+        <h3>How can I post a job for recruitment?</h3>
+        <p>Log in to your recruiter account and navigate to the "Post a Job" section. Fill in the job details and submit it for approval by the admin.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I filter applicants based on specific criteria?</h3>
+        <p>Yes, you can use the advanced filters in the "Applicants" section to shortlist candidates based on qualifications, skills, or experience.</p>
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <h2>Technical Support</h2>
+      <div class="faq-item">
+        <h3>What should I do if I forget my password?</h3>
+        <p>Click on the "Forgot Password" link on the login page, enter your registered email address, and follow the instructions to reset your password.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I contact technical support?</h3>
+        <p>For any technical issues, you can reach our support team at <a href="mailto:support@collegemanagement.com">support@collegemanagement.com</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; Eduric. All rights reserved.</p>
+  </div>
+
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-item h3').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isVisible = answer.style.display === 'block';
+        document.querySelectorAll('.faq-item p').forEach(p => (p.style.display = 'none'));
+        answer.style.display = isVisible ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
+

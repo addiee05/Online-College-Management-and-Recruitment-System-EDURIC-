@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        .form-container {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #6a11cb;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background: #2575fc;
+        }
+        .form-container .options {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .form-container .options a {
+            color: #2575fc;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .form-container .options a:hover {
+            text-decoration: underline;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .modal-content button {
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-content button:hover {
+            background: #2575fc;
+        }
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Login</h2>
+    <FORM METHOD="POST" ACTION="login">
+        <input type="email" placeholder="Enter your email" required>
+        <input type="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+    </form>
+    <div class="options">
+        <a id="forgotPasswordLink">Forgot Password?</a> | 
+        <p class="switch-text">New here? <a href="#sign-up" id="signUpLink">Sign Up</a></p>
+    
+    </div>
+</div>
+
+<!-- Forgot Password Modal -->
+<div class="modal" id="forgotPasswordModal">
+    <div class="modal-content">
+        <span class="close" id="closeForgot">&times;</span>
+        <h2>Reset Password</h2>
+        <input type="email" placeholder="Enter your email" required>
+        <button>Send Reset Link</button>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+
+    <div class="form-wrapper hidden" id="signUpFormWrapper">
+      <h1 class="title">Create an Account</h1>
+      <FORM METHOD="POST" ACTION="signup">
+        <label for="newName">Full Name</label>
+        <input type="text" id="newName" name="newName" placeholder="Enter your full name" required>
+        <label for="newEmail">Email</label>
+        <input type="email" id="newEmail" name="newEmail" placeholder="Enter your email" required>
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" name="newPassword" placeholder="Create a password" required>
+        <button type="submit" class="btn signup-btn">Sign Up</button>
+      </form>
+      <p class="switch-text">Already have an account? <a href="#login" id="loginLink">Login</a></p>
+    </div>
+  
+    
+
+
+<script>
+    // Get elements
+    const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+    const signUpModal = document.getElementById('signUpModal');
+    const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+    const signUpLink = document.getElementById('signUpLink');
+    const closeForgot = document.getElementById('closeForgot');
+    const closeSignUp = document.getElementById('closeSignUp');
+
+    // Open modals
+    forgotPasswordLink.onclick = () => forgotPasswordModal.style.display = 'flex';
+    signUpLink.onclick = () => signUpModal.style.display = 'flex';
+
+    // Close modals
+    closeForgot.onclick = () => forgotPasswordModal.style.display = 'none';
+    closeSignUp.onclick = () => signUpModal.style.display = 'none';
+
+    // Close modals when clicking outside
+    window.onclick = (event) => {
+        if (event.target === forgotPasswordModal) forgotPasswordModal.style.display = 'none';
+        if (event.target === signUpModal) signUpModal.style.display = 'none';
+    };
+</script>
+
+</body>
+</html>

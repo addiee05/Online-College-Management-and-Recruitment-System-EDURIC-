@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout | Eduric Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2d89ef, #47a4ff);
+            color: #fff;
+        }
+        .logout-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .logout-container h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .logout-container p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .logout-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #2d89ef;
+            background: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .logout-container a:hover {
+            background: #f4f7fc;
+            color: #1c5dac;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Are you sure you want to logout?</h1>
+        <p>You will be redirected to the main page.</p>
+        <a href="main.html">Logout</a>
+    </div>
+</body>
+</html>
